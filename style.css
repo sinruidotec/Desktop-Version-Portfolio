@@ -645,8 +645,9 @@
   }
 
   .experience__multi-post {
-    width: 100%;
     display: flex;
+    flex-direction: row;
+    width: 100%;
     gap: 20px;
     margin-bottom: 24px;
   }
