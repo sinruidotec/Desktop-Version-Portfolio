@@ -24,7 +24,7 @@ Portfolio: setup and mobile first
 - [📝 License](#license)
 
 
-# 📖 [Portfolio] <a name="about-project"></a>
+# 📖 [Portfolio.] <a name="about-project"></a>
 
 
 **[Portfolio]** It is a showcase to show my current and future projects.
