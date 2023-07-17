@@ -105,6 +105,8 @@ No tests needed at the moment
 
 ### Deployment
 
+Visit the deployed website at https://sinruidotec.github.io/Desktop-Version-Portfolio/
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
