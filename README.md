@@ -3,7 +3,7 @@ Portfolio: setup and mobile first
 
 <a name="readme-top"></a>
 
-# 📗 Table of Contents
+# 📗 Table of Contents.
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
@@ -122,8 +122,9 @@ Visit the deployed website at https://sinruidotec.github.io/Desktop-Version-Port
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Section_2]**
-- [ ] **[Responsive_Design]**
+- [ ] **[Contact_Form_Validation]**
+- [ ] **[Local_Storage]**
+- [ ] **[Popup_Windows]**
 - [ ] **[Additional_projects]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
