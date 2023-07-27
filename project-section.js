@@ -13,7 +13,14 @@ const GRID_PROJECT = [
     item_stack: ["Bootstrap","HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    classes: "grid__item-1-4"
+    classes: "grid__item-2-5"
+  },
+  {
+    title: "Profesional Art Printing Data",
+    item_stack: ["Bootstrap","HTML", "Ruby"],
+    img: "Assets/Snapshoot Portfolio.svg",
+    p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+    classes: "grid__item-3-6"
   },
   {
     title: "Profesional Art Printing Data",
@@ -27,21 +34,14 @@ const GRID_PROJECT = [
     item_stack: ["Bootstrap","HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    classes: "grid__item-1-4"
+    classes: "grid__item-2-5"
   },
   {
     title: "Profesional Art Printing Data",
     item_stack: ["Bootstrap","HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    classes: "grid__item-1-4"
-  },
-  {
-    title: "Profesional Art Printing Data",
-    item_stack: ["Bootstrap","HTML", "Ruby"],
-    img: "Assets/Snapshoot Portfolio.svg",
-    p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
-    classes: "grid__item-1-4"
+    classes: "grid__item-3-6"
   },
 ];
 
@@ -53,7 +53,7 @@ const card = (project_info, index) => {
     <h4>${title}</h4>
     <p class="grid__item-1-4-paragraph p__hover">${p_text}</p>
     <ul class="grid__item-stack">
-        ${item_stack.map((item) => ` <li class="grid__badges">${item}</li>`)}
+        ${item_stack.map((item) => ` <li class="grid__badges">${item}</li>`).join('')}
     </ul>
     </div>
     <button id="${index}" class="grid__item-button">See project</button>
@@ -69,17 +69,13 @@ const grid = (grid_projects) => {
 
 EXPERIENCE_GRID.innerHTML = grid(GRID_PROJECT);
 
-// Selecciona todos los botones con la clase .grid__item-button
 const buttons = document.querySelectorAll('.grid__item-button');
 
-// Agrega un evento 'click' a cada botón
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
-    // Aquí puedes poner el código que se ejecutará cuando se haga clic en el botón
-    // Puedes acceder a la información del proyecto relacionado con este botón a través de la variable GRID_PROJECT
+
     const projectInfo = GRID_PROJECT[index];
     console.log('Se hizo clic en el botón:', projectInfo);
-    // Por ejemplo, si deseas redirigir a otra página al hacer clic en el botón, puedes usar window.location.href
-    // window.location.href = 'ruta-de-la-pagina';
+
   });
 });
