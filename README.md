@@ -51,6 +51,7 @@ Portfolio: setup and mobile first
 - **[Desktop_version]**
 - **[Linterns_Best_Practices]**
 - **[Responsive]**
+- **[DOM Manipulation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
