@@ -910,7 +910,7 @@
   }
 
   .grid__item-3-6 {
-    padding-top: 123px;
+    padding-top: 79px;
     background-image: url(Assets/grid-web-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -996,7 +996,7 @@
   }
 
   .grid__hover:hover h4,
-  .p__hover,
+  .grid__hover:hover p,
   .grid__hover:hover ul {
     opacity: 0;
   }
