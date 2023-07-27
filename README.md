@@ -122,8 +122,10 @@ Visit the deployed website at https://sinruidotec.github.io/Desktop-Version-Port
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Section_2]**
-- [ ] **[Responsive_Design]**
+- [ ] **[Mobile_Menu]**
+- [ ] **[Contact_Form_Validation]**
+- [ ] **[Local_Storage]**
+- [ ] **[Popup_Windows]**
 - [ ] **[Additional_projects]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
