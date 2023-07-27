@@ -125,7 +125,7 @@ Visit the deployed website at https://sinruidotec.github.io/Desktop-Version-Port
 - [ ] **[Mobile_Menu]**
 - [ ] **[Contact_Form_Validation]**
 - [ ] **[Local_Storage]**
-- [ ] **[Popup_Windows]**
+- [ ] **[Modal_Windows]**
 - [ ] **[Additional_projects]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
