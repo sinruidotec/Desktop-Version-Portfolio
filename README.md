@@ -41,6 +41,9 @@ Portfolio: setup and mobile first
 <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
   </ul>
+<ul>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
+  </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
