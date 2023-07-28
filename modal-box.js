@@ -1,5 +1,5 @@
-const SEE_PROJECT_BUTTON = document.querySelector(".experience__button");
-const MODAL_BOX = document.getElementById("modal__box_container");
+const SEE_PROJECT_BUTTON2 = document.querySelector(".experience__button");
+const MODAL_BOX2 = document.getElementById("modal__box_container");
 const PROJECTS_ARRAY = [
   {
     title_d: "Keeping track of hundreds of components website",
@@ -9,28 +9,39 @@ const PROJECTS_ARRAY = [
     img: "Assets/Snapshoot Portfolio.svg",
     p_text_d:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. <br> <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relax map lapora verita.",
-    p_text_m:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.",
-      live_button: "Assets/Icon - Export.svg",
-      source_button: "Assets/Icon -GitHub.svg",
+    p_text_m:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.",
+    live_button: "Assets/Icon - Export.svg",
+    source_button: "Assets/Icon -GitHub.svg",
   },
 ];
 
 function modalDisplay(project) {
-  const MY_OBJECT = [project];
-  const MODAL_HTML = MY_OBJECT.map(componentToHTML).join("");
-  MODAL_BOX.innerHTML = MODAL_HTML;
-  MODAL_BOX.style.display = "block";
+  const MODAL_HTML = componentToHTML(project);
+  MODAL_BOX2.innerHTML = MODAL_HTML;
+  MODAL_BOX2.style.display = "block";
 }
 
 function modalClose() {
-  MODAL_BOX.style.display = "none";
+  MODAL_BOX2.style.display = "none";
 }
 
-SEE_PROJECT_BUTTON.addEventListener("click", () => modalDisplay(PROJECTS_ARRAY[0]));
+SEE_PROJECT_BUTTON2.addEventListener("click", () =>
+  modalDisplay(PROJECTS_ARRAY[0])
+);
 
 function componentToHTML(modal_info) {
-  const { title_d, title_m, x_button, item_stack, img, p_text_d, p_text_m, live_button, source_button } =
-    modal_info;
+  const {
+    title_d,
+    title_m,
+    x_button,
+    item_stack,
+    img,
+    p_text_d,
+    p_text_m,
+    live_button,
+    source_button,
+  } = modal_info;
 
   return `
     <div class="modal__info-container">
@@ -41,7 +52,9 @@ function componentToHTML(modal_info) {
           <img class="x_buttonIcon" id="modal__none" src="${x_button}" alt="">
         </div>
         <ul>
-          ${item_stack.map((stack) => `<li class="li__Stack">${stack}</li>`).join("")}
+          ${item_stack
+            .map((stack) => `<li class="li__Stack">${stack}</li>`)
+            .join("")}
         </ul>
       </div>
       <div class="modal__main">
@@ -63,7 +76,7 @@ function componentToHTML(modal_info) {
   `;
 }
 
-MODAL_BOX.addEventListener("click", function (event) {
+MODAL_BOX2.addEventListener("click", function (event) {
   if (event.target.id === "modal__none") {
     modalClose();
   }
