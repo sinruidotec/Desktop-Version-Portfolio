@@ -66,7 +66,7 @@ const card = (project_info, index) => {
   return `<div class="${classes}">
     <div class="grid__hover">
     <h4>${title}</h4>
-    <p class="grid__item-1-4-paragraph p__hover">${p_text}</p>
+    <p class="grid__item-1-4-paragraph p__hover p">${p_text}</p>
     <ul class="grid__item-stack">
         ${item_stack
           .map((item) => ` <li class="grid__badges">${item}</li>`)

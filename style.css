@@ -674,28 +674,27 @@
     font: 700 17px/24px  'Inter', sans-serif;
     color: #fff;
   }
-  }
+}
 
-  .modal__main-buttons-style {
-    padding: 12px 11px;
-    background: #f35e08;
-  }
+.modal__main-buttons-style {
+  padding: 12px 11px;
+  background: #f35e08;
+}
 
-  .title_desk {
-    display: none;
-  }
+.title_desk {
+  display: none;
+}
 
-  .title_mob {
-    display: block;
-  }
+.title_mob {
+  display: block;
+}
 
-  .mobile_p {
-    display: block;
-  }
+.mobile_p {
+  display: block;
+}
 
-  .desktop_p {
-    display: none;
-  }
+.desktop_p {
+  display: none;
 }
 
 @media only screen and (min-width: 571px) {
@@ -919,7 +918,7 @@
   }
 
   .grid__item-3-6 {
-    padding-top: 170px;    
+    padding-top: 170px;
     background-image: url(Assets/grid-web-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1005,7 +1004,7 @@
   }
 
   .grid__hover:hover h4,
-  .grid__hover:hover p,
+  .grid__hover:hover .p,
   .grid__hover:hover ul {
     opacity: 0;
   }
@@ -1016,13 +1015,12 @@
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     bottom: 47px;
+    display: none;
   }
 
-  .grid__item-button {
-display: none;}
-
-.grid__item-button {
-display: block;}
+  .grid__hover:hover + .grid__item-button {
+    display: block;
+  }
 
   #about {
     margin: auto;
@@ -1211,7 +1209,7 @@ display: block;}
 
   .modal__header li {
     font: 600 15px/20px 'Poppins', sans-serif;
-    padding:  12px;
+    padding: 12px;
     border: 1px  solid #979493;
     border-radius: 4px;
     margin-right: 8px;
