@@ -3,11 +3,11 @@ const MODAL_BOX3 = document.getElementById("modal__box_container");
 const SEE_PROJECT_BUTTON3 = document.querySelector(".experience__button");
 const GRID_MOBILE_PROJECT = [
   {
-    title: "1 Profesional Art Printing Data",
+    title: "Profesional Art Printing Data",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
-    p_text:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+    p_text: "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+    button: "See project",
   },
   {
     title: "2Profesional Art Printing Data",
@@ -15,6 +15,7 @@ const GRID_MOBILE_PROJECT = [
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+      button: "See project",
   },
   {
     title: "3Profesional Art Printing Data",
@@ -22,6 +23,7 @@ const GRID_MOBILE_PROJECT = [
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+      button: "See project",
   },
   {
     title: "4Profesional Art Printing Data",
@@ -29,6 +31,7 @@ const GRID_MOBILE_PROJECT = [
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+      button: "See project",
   },
   {
     title: "5Profesional Art Printing Data",
@@ -36,18 +39,20 @@ const GRID_MOBILE_PROJECT = [
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+    button: "See project"      
   },
   {
-    title: "6Profesional Art Printing Data",
+    title: "Profesional Art Printing Data",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
+      button: "See project",
   },
 ];
 
 const card_mobile = (project_info, index) => {
-  const { title, p_text, item_stack, classes } = project_info;
+  const { title, p_text, item_stack, button } = project_info;
 
   return `<div class="grid__item">
     <h4>${title}</h4>
@@ -57,7 +62,7 @@ const card_mobile = (project_info, index) => {
         .map((item) => `<li class="grid__badges">${item}</li>`)
         .join("")}
     </ul>
-    <button class="grid__item-button experience__button 345345345">See project</button>
+    <button class="grid__item-button experience__button 345345345">${button}</button>
   </div>`;
 };
 

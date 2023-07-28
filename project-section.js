@@ -2,16 +2,17 @@ const MODAL_BOX = document.getElementById("modal__box_container");
 const EXPERIENCE_GRID = document.querySelector(".grid__item-hidden");
 const GRID_PROJECT = [
   {
-    title: "1Profesional Art Printing Data",
+    title: "Profesional Art Printing Data",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: "grid__item-1-4",
     x_button: "Assets/Icon - Cancel.svg",
+    
   },
   {
-    title: "2Profesional Art Printing Data",
+    title: "Data Dashboard Healthcare",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
@@ -20,7 +21,7 @@ const GRID_PROJECT = [
     x_button: "Assets/Icon - Cancel.svg",
   },
   {
-    title: "3Profesional Art Printing Data",
+    title: "Website Portfolio",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
@@ -29,7 +30,7 @@ const GRID_PROJECT = [
     x_button: "Assets/Icon - Cancel.svg",
   },
   {
-    title: "4Profesional Art Printing Data",
+    title: "Profesional Art Printing Data",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
@@ -38,7 +39,7 @@ const GRID_PROJECT = [
     x_button: "Assets/Icon - Cancel.svg",
   },
   {
-    title: "5Profesional Art Printing Data",
+    title: "Data Dashboard Healthcare",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
@@ -47,7 +48,7 @@ const GRID_PROJECT = [
     x_button: "Assets/Icon - Cancel.svg",
   },
   {
-    title: "6Profesional Art Printing Data",
+    title: "Website Portfolio",
     item_stack: ["Bootstrap", "HTML", "Ruby"],
     img: "Assets/Snapshoot Portfolio.svg",
     p_text:
@@ -70,9 +71,9 @@ const card = (project_info, index) => {
         ${item_stack
           .map((item) => ` <li class="grid__badges">${item}</li>`)
           .join("")}
-    </ul>
-    </div>
-    <button id="${index}" class="grid__item-button 3tw353252352353">See project</button>
+          </ul>
+          </div>
+          <button id="${index}" class="grid__item-button 3tw353252352353">See project</button>
     </div>
 `;
 };
@@ -86,35 +87,49 @@ function modalDisplay2(project) {
 function componentToHTML2(modal_info) {
   console.log("modal_info", modal_info);
   const { title, x_button, item_stack, img, p_text } = modal_info;
-
-  return `
-    <div class="modal__info-container">
-      <div class="modal__header">
-        <div class="modal__header-title">
-          <h2 class="title_desk">${title}</h2>
-          <h2 class="title_mob">${title}</h2>
-          <img class="x_buttonIcon" id="modal__none" src="${x_button}" alt="">
+  
+    return `
+      <div class="modal__info-container">
+        <div class="modal__header">
+          <div class="modal__header-title">
+            <h2 class="title_desk">${title}</h2>
+            <h2 class="title_mob">${title}</h2>
+            <img class="x_buttonIcon" id="modal__none" src="${x_button}" alt="">
+          </div>
+          <ul>
+            ${item_stack
+              .map((stack) => `<li class="li__Stack">${stack}</li>`)
+              .join("")}
+          </ul>
         </div>
-        <ul>
-          ${item_stack
-            .map((stack) => `<li class="li__Stack">${stack}</li>`)
-            .join("")}
-        </ul>
-      </div>
-      <div class="modal__main">
-        <div class="modal__main-img">
-          <img src="${img}" alt="">
-        </div>
-        <div class="modal__main-info">
-          <div class="modal__main-p-container">
-            <p class="desktop_p">${p_text}</p>
-            <p class="mobile_p">${p_text}</p>
+        <div class="modal__main">
+          <div class="modal__main-img">
+            <img src="${img}" alt="">
+          </div>
+          <div class="modal__main-info">
+            <div class="modal__main-p-container">
+              <p class="desktop_p">${p_text}</p>
+              <p class="mobile_p">${p_text}</p>
+            </div>
+            <div class="modal__main-buttons-container">
+  
+              <a class="live modal__main-buttons-style" href>
+                See live
+                <img src="Assets/Icon - Export.svg" alt>
+              </a>
+              <a class="see modal__main-buttons-style" href>
+                See source
+                <img src="Assets/Icon -GitHub.svg" alt>
+              </a> 
+  
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  `;
-}
+    `;
+  }
+  
+
 
 MODAL_BOX.addEventListener("click", function (event) {
   if (event.target.id === "modal__none") {
