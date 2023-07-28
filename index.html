@@ -8,11 +8,11 @@
   <script defer src="mobile-menu.js"></script>
   <script defer type="text/javascript" src="modal-box.js"></script>
   <script defer type="text/javascript" src="project-section.js"></script>
-  <script defer type="text/javascript" src="mobile-modal.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <title>Jonathan Arias Gallego | Portfolio</title>
 </head>
+
 <body>
   <header>
     <nav id="navbar" class="open">
@@ -80,8 +80,6 @@
       </div>
       <div class="experience__grid">
       </div>
-      <div class="grid__item-hidden">
-      </div>
       <div class="modal__container" id="modal__box_container">
       </div>
     </section>
@@ -134,18 +132,20 @@
         <div class="contact__form">
           <form id="myForm" class="form" action="https://formspree.io/f/mknadvkq" method="post">
             <label for="name">
-              <input type="text" id="name" name="name" placeholder="Full name" class="form-input" required maxlength="30">
+              <input type="text" id="name" name="name" placeholder="Full name" class="form-input" required
+                maxlength="30">
             </label>
             <label class="form__email">
               <input type="email" id="email" name="email" placeholder="Email address" class="form-input" required>
             </label>
             <label class="form__section">
-              <textarea class="form-box" id="message-box" name="message" placeholder="Write something here..." required maxlength="500"></textarea>
+              <textarea class="form-box" id="message-box" name="message" placeholder="Write something here..." required
+                maxlength="500"></textarea>
             </label>
             <div class="send__button">
               <button class="contact__button" type="button" onclick="validateAndSubmit()">Get in touch</button>
             </div>
-            <p id="error-message" >Please enter a lowercase email address.</p>
+            <p id="error-message"></p>
           </form>
         </div>
       </div>

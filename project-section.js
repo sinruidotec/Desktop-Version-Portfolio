@@ -1,5 +1,5 @@
 const MODAL_BOX = document.getElementById('modal__box_container');
-const EXPERIENCE_GRID = document.querySelector('.grid__item-hidden');
+const EXPERIENCE_GRID = document.querySelector('.experience__grid');
 const GRID_PROJECT = [
   {
     title: 'Profesional Art Printing Data',
@@ -8,8 +8,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-1-4',
-    xButton: 'Assets/Icon - Cancel.svg',
-
   },
   {
     title: 'Data Dashboard Healthcare',
@@ -18,7 +16,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-2-5',
-    xButton: 'Assets/Icon - Cancel.svg',
   },
   {
     title: 'Website Portfolio',
@@ -27,7 +24,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-3-6',
-    xButton: 'Assets/Icon - Cancel.svg',
   },
   {
     title: 'Profesional Art Printing Data',
@@ -36,7 +32,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-1-4',
-    xButton: 'Assets/Icon - Cancel.svg',
   },
   {
     title: 'Data Dashboard Healthcare',
@@ -45,7 +40,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-2-5',
-    xButton: 'Assets/Icon - Cancel.svg',
   },
   {
     title: 'Website Portfolio',
@@ -54,7 +48,6 @@ const GRID_PROJECT = [
     pText:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industry's standard.",
     classes: 'grid__item-3-6',
-    xButton: 'Assets/Icon - Cancel.svg',
   },
 ];
 
@@ -80,7 +73,7 @@ const card = (projectInfo, index) => {
 
 function componentToHTML2(modalnfo) {
   const {
-    title, xButton, itemStack, img, pText,
+    title, itemStack, img, pText,
   } = modalnfo;
 
   return `
@@ -89,7 +82,7 @@ function componentToHTML2(modalnfo) {
           <div class="modal__header-title">
             <h2 class="title_desk">${title}</h2>
             <h2 class="title_mob">${title}</h2>
-            <img class="x_buttonIcon" id="modal__none" src="${xButton}" alt="">
+            <img class="x_buttonIcon" id="modal__none" src='Assets/Icon - Cancel.svg' alt="">
           </div>
           <ul>
             ${itemStack
@@ -108,11 +101,11 @@ function componentToHTML2(modalnfo) {
             </div>
             <div class="modal__main-buttons-container">
   
-              <a class="live modal__main-buttons-style" href>
+              <a class="live modal__main-buttons-style" href="https://sinruidotec.github.io/Desktop-Version-Portfolio/"> 
                 See live
                 <img src="Assets/Icon - Export.svg" alt>
               </a>
-              <a class="see modal__main-buttons-style" href>
+              <a class="see modal__main-buttons-style" href="https://github.com/sinruidotec/Desktop-Version-Portfolio/tree/Popup-Window-implementation">
                 See source
                 <img src="Assets/Icon -GitHub.svg" alt>
               </a> 

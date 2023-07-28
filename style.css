@@ -10,9 +10,9 @@
 }
 
 @media only screen and (min-width: 100px) {
-  .grid__item-hidden {
+  /* .grid__item-hidden {
     display: none;
-  }
+  } */
 
   body {
     background: #e5e5e5;
@@ -276,16 +276,8 @@
     gap: 24px;
   }
 
-  .grid__item {
-    max-width: 327px;
-    background-image: url(Assets/grid-fade-prof-img.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    padding: 72px 19px 0 0;
-  }
-
   .grid__item h4 {
+    color: #f35e08;
     font-family: 'Crete Round', serif;
     font-weight: 400;
     font-size: 32px;
@@ -304,11 +296,12 @@
   }
 
   .grid__item-stack {
+    color: #fff;
     display: flex;
     margin-bottom: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     gap: 12px;
     margin-left: 13px;
@@ -321,7 +314,10 @@
   }
 
   .grid__item-button {
-    width: 327px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 17px;
@@ -338,6 +334,99 @@
     color: #f55800;
     background: #fff5e1;
     border: 1px solid #f55800;
+  }
+
+  .grid__item-2-5 {
+    position: relative;
+    padding-top: 71px;
+    margin-left: 1px;
+    background-image: url(Assets/grid-data-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .grid__item-1-4 {
+    position: relative;
+    padding-top: 72px;
+    background-image: url(Assets/grid-fade-prof-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .grid__item-1-4:hover {
+    background-image: url(Assets/grid-plane-img.svg);
+  }
+
+  .grid__item-3-6 {
+    position: relative;
+    padding-top: 72px;
+    margin-left: 1px;
+    background-image: url(Assets/grid-web-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .grid__item-2-5 h4 {
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #fff;
+    margin-bottom: 12px;
+    margin-left: 16px;
+  }
+
+  .grid__item-2-5-paragraph {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-left: 16px;
+  }
+
+  .grid__item-1-4 h4 {
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 12px;
+    margin-left: 16px;
+  }
+
+  .grid__item-1-4-paragraph {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+  }
+
+  .grid__item-3-6 h4 {
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #fff;
+    margin-top: 44px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+  }
+
+  .grid__item-3-6-paragraph {
+    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-left: 16px;
   }
 
   #about {
@@ -881,7 +970,7 @@
     cursor: pointer;
   }
 
-  .grid__item-hidden {
+  .experience__grid {
     display: block;
     display: grid;
     grid-template-columns: repeat(3, minmax(230px, 386px));
@@ -891,15 +980,16 @@
     overflow: hidden;
   }
 
-  .experience__grid {
+  /* .experience__grid {
     display: none;
-  }
+  } */
 
-  .grid__item {
+  /* .grid__item {
     display: none;
-  }
+  } */
 
   .grid__item-2-5 {
+    position: relative;
     padding-top: 170px;
     background-image: url(Assets/grid-data-img.svg);
     background-repeat: no-repeat;
@@ -907,6 +997,7 @@
   }
 
   .grid__item-1-4 {
+    position: relative;
     padding-top: 170px;
     background-image: url(Assets/grid-fade-prof-img.svg);
     background-repeat: no-repeat;
@@ -1010,11 +1101,11 @@
   }
 
   .grid__item-button {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
-    bottom: 47px;
     display: none;
   }
 
