@@ -1,60 +1,46 @@
-const SEE_PROJECT_BUTTON2 = document.querySelector(".experience__button");
-const MODAL_BOX2 = document.getElementById("modal__box_container");
+const SEE_PROJECT_BUTTON2 = document.querySelector('.experience__button');
+const MODAL_BOX2 = document.getElementById('modal__box_container');
 const PROJECTS_ARRAY = [
   {
-    title_d: "Keeping track of hundreds of components website",
-    title_m: "Multi Post Stories",
-    item_stack: ["HTML", "Bootstrap", "Ruby on Rails"],
-    x_button: "Assets/Icon - Cancel.svg",
-    img: "Assets/Snapshoot Portfolio.svg",
-    p_text_d:
+    titleD: 'Keeping track of hundreds of components website',
+    titleM: 'Multi Post Stories',
+    itemStack: ['HTML', 'Bootstrap', 'Ruby on Rails'],
+    xButton: 'Assets/Icon - Cancel.svg',
+    img: 'Assets/Snapshoot Portfolio.svg',
+    pTextD:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. <br> <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relax map lapora verita.",
-    p_text_m:
+    pTextM:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.",
-    live_button: "Assets/Icon - Export.svg",
-    source_button: "Assets/Icon -GitHub.svg",
+    liveButton: 'Assets/Icon - Export.svg',
+    sourceButton: 'Assets/Icon -GitHub.svg',
   },
 ];
 
-function modalDisplay(project) {
-  const MODAL_HTML = componentToHTML(project);
-  MODAL_BOX2.innerHTML = MODAL_HTML;
-  MODAL_BOX2.style.display = "block";
-}
-
-function modalClose() {
-  MODAL_BOX2.style.display = "none";
-}
-
-SEE_PROJECT_BUTTON2.addEventListener("click", () =>
-  modalDisplay(PROJECTS_ARRAY[0])
-);
-
-function componentToHTML(modal_info) {
+function componentToHTML(modalnfo) {
   const {
-    title_d,
-    title_m,
-    x_button,
-    item_stack,
+    titleD,
+    titleM,
+    xButton,
+    itemStack,
     img,
-    p_text_d,
-    p_text_m,
-    live_button,
-    source_button,
-  } = modal_info;
+    pTextD,
+    pTextM,
+    liveButton,
+    sourceButton,
+  } = modalnfo;
 
   return `
     <div class="modal__info-container">
       <div class="modal__header">
         <div class="modal__header-title">
-          <h2 class="title_desk">${title_d}</h2>
-          <h2 class="title_mob">${title_m}</h2>
-          <img class="x_buttonIcon" id="modal__none" src="${x_button}" alt="">
+          <h2 class="title_desk">${titleD}</h2>
+          <h2 class="title_mob">${titleM}</h2>
+          <img class="x_buttonIcon" id="modal__none" src="${xButton}" alt="">
         </div>
         <ul>
-          ${item_stack
-            .map((stack) => `<li class="li__Stack">${stack}</li>`)
-            .join("")}
+          ${itemStack
+    .map((stack) => `<li class="li__Stack">${stack}</li>`)
+    .join('')}
         </ul>
       </div>
       <div class="modal__main">
@@ -63,12 +49,12 @@ function componentToHTML(modal_info) {
         </div>
         <div class="modal__main-info">
           <div class="modal__main-p-container">
-            <p class="desktop_p">${p_text_d.replace(/\n/g, "<br>")}</p>
-            <p class="mobile_p">${p_text_m.replace(/\n/g, "<br>")}</p>
+            <p class="desktop_p">${pTextD.replace(/\n/g, '<br>')}</p>
+            <p class="mobile_p">${pTextM.replace(/\n/g, '<br>')}</p>
           </div>
           <div class="modal__main-buttons-container">
-            <a class="live modal__main-buttons-style" href="">See live<img src="${live_button}" alt=""></a>
-            <a class="see modal__main-buttons-style" href="">See source<img src="${source_button}" alt=""></a>
+            <a class="live modal__main-buttons-style" href="">See live<img src="${liveButton}" alt=""></a>
+            <a class="see modal__main-buttons-style" href="">See source<img src="${sourceButton}" alt=""></a>
           </div>
         </div>
       </div>
@@ -76,8 +62,19 @@ function componentToHTML(modal_info) {
   `;
 }
 
-MODAL_BOX2.addEventListener("click", function (event) {
-  if (event.target.id === "modal__none") {
+function modalDisplay(project) {
+  const MODAL_HTML = componentToHTML(project);
+  MODAL_BOX2.innerHTML = MODAL_HTML;
+  MODAL_BOX2.style.display = 'block';
+}
+
+SEE_PROJECT_BUTTON2.addEventListener('click', () => modalDisplay(PROJECTS_ARRAY[0]));
+function modalClose() {
+  MODAL_BOX2.style.display = 'none';
+}
+
+MODAL_BOX2.addEventListener('click', (event) => {
+  if (event.target.id === 'modal__none') {
     modalClose();
   }
 });
