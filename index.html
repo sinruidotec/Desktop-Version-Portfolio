@@ -8,6 +8,7 @@
   <script defer src="mobile-menu.js"></script>
   <script defer type="text/javascript" src="modal-box.js"></script>
   <script defer type="text/javascript" src="project-section.js"></script>
+  <script defer type="text/javascript" src="form-validation.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <title>Jonathan Arias Gallego | Portfolio</title>
@@ -131,22 +132,21 @@
         </h3>
         <div class="contact__form">
           <form id="myForm" class="form" action="https://formspree.io/f/mknadvkq" method="post">
-            <label for="name">
-              <input type="text" id="name" name="name" placeholder="Full name" class="form-input" required
-                maxlength="30">
+            <label form="name">
+              <input type="text" id="name" name="name" placeholder="Full name" class="form-input" required maxlength="30">
             </label>
             <label class="form__email">
               <input type="email" id="email" name="email" placeholder="Email address" class="form-input" required>
             </label>
             <label class="form__section">
-              <textarea class="form-box" id="message-box" name="message" placeholder="Write something here..." required
-                maxlength="500"></textarea>
+                <div id="error-message" class="error-message"><span class="exclamation__icon">⚠</span>Email must be written in lowercase.</div>
+              <textarea class="form-box" id="message-box" name="message" placeholder="Write something here..." required maxlength="500"></textarea>
             </label>
             <div class="send__button">
-              <button class="contact__button" type="button" onclick="validateAndSubmit()">Get in touch</button>
+              <button class="contact__button" type="submit">Get in touch</button>
             </div>
-            <p id="error-message"></p>
           </form>
+          
         </div>
       </div>
       <hr>

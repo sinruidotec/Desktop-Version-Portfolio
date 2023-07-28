@@ -9,6 +9,36 @@
   list-style: none;
 }
 
+.error__message-container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: space-between;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 1%;
+  padding-left: 12px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px rgb(182, 182, 182);
+}
+
+.exclamation__icon {
+  font-weight: bold;
+  padding: 6px;
+  color: whitesmoke;
+  background: rgb(255, 166, 2);
+  border-radius: 2px;
+  margin-right: 12px;
+}
+
+.error-message {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px rgb(182, 182, 182);
+  padding: 12px;
+  max-width: max-content;
+  margin-top: 10px;
+  display: none;
+}
+
 @media only screen and (min-width: 100px) {
   /* .grid__item-hidden {
     display: none;
