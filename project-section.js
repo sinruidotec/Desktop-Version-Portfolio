@@ -116,6 +116,30 @@ function componentToHTML2(modal_info) {
   `;
 }
 
-// paste here
+MODAL_BOX.addEventListener("click", function (event) {
+  if (event.target.id === "modal__none") {
+    modalClose();
+  }
+});
 
+function modalClose() {
+  MODAL_BOX.style.display = "none";
+}
 
+const grid = (grid_projects) => {
+  let markup = grid_projects.reduce((acc, item, i) => {
+    return (acc += card(item, i));
+  }, ``);
+  return markup;
+};
+
+EXPERIENCE_GRID.innerHTML = grid(GRID_PROJECT);
+
+const buttons = document.querySelectorAll(".grid__item-button");
+
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const projectInfo = GRID_PROJECT[index];
+    modalDisplay2(projectInfo);
+  });
+});
