@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600&family=Poppins&family=Roboto&display=swap');
 
-.wertwetrwertwet {
-  display: none;
-}
-
-.grid__hover:hover + .wertwetrwertwet {
-  display: block;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -601,15 +593,16 @@
   .modal__header ul {
     display: flex;
     justify-content: start;
-    height: 36px;
+    height: 24px;
     margin-right: 0;
+    padding: 0;
   }
 
   .modal__header ul li {
     height: 36px;
-    font-size: 12px;
+    font-size: 15px;
     margin-right: 8px;
-    line-height: 18px;
+    line-height: 15px;
   }
 
   .modal__header-title {
@@ -626,14 +619,14 @@
   }
 
   .modal__header h2 {
-    font: 700 32px/44px 'Roboto', sans-serif;
+    font: 700 px/44px 'Roboto', sans-serif;
     color: #172b4d;
     padding: 0;
   }
 
   .li__Stack {
-    font: 600 15px/20px 'Poppins', sans-serif;
-    padding: 10px 12px;
+    font: 600 14px/20px 'Poppins', sans-serif;
+    padding: 10px 8px;
     border: 1px  solid #979493;
     border-radius: 4px;
     margin-right: 8px;
@@ -673,6 +666,14 @@
     gap: 12px;
     font: 700 17px/24px  'Inter', sans-serif;
     color: #fff;
+  }
+
+  .modal__main-buttons-style {
+    display: flex;
+    gap: 12px;
+    font: 700 17px/24px  'Inter', sans-serif;
+    color: #fff;
+  }
   }
 
   .modal__main-buttons-style {
@@ -900,14 +901,14 @@
   }
 
   .grid__item-2-5 {
-    padding-top: 123px;
+    padding-top: 170px;
     background-image: url(Assets/grid-data-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .grid__item-1-4 {
-    padding-top: 123px;
+    padding-top: 170px;
     background-image: url(Assets/grid-fade-prof-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -918,7 +919,7 @@
   }
 
   .grid__item-3-6 {
-    padding-top: 79px;
+    padding-top: 170px;    
     background-image: url(Assets/grid-web-img.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1010,12 +1011,18 @@
   }
 
   .grid__item-button {
+    position: relative;
     width: 100%;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
-    bottom: 100%;
-    transition: 0.3s;
+    bottom: 47px;
   }
+
+  .grid__item-button {
+display: none;}
+
+.grid__item-button {
+display: block;}
 
   #about {
     margin: auto;
@@ -1151,7 +1158,7 @@
 
   .modal__container {
     width: 100%;
-    height: 100%;
+    height: 100;
     background-color: transparent;
     backdrop-filter: blur(10px);
     position: fixed;
@@ -1163,6 +1170,7 @@
 
   .modal__info-container {
     width: 83.7%;
+    height: 631px;
     background-color: #fff;
     padding: 24px;
     display: flex;
@@ -1174,6 +1182,7 @@
 
   .modal__header {
     width: 100%;
+    height: 48px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1183,25 +1192,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0;
+    margin-top: 0;
   }
 
   .x_buttonIcon {
     width: 24px;
     cursor: pointer;
+    margin-top: -24px;
   }
 
   .modal__header h2 {
     font: 400 32px/44px'Crete Round', serif;
     color: #172b4d;
     padding: 0;
+    margin-top: -24px;
   }
 
   .modal__header li {
     font: 600 15px/20px 'Poppins', sans-serif;
-    padding: 10px 12px;
+    padding:  12px;
     border: 1px  solid #979493;
     border-radius: 4px;
     margin-right: 8px;
+    margin-top: -18px;
   }
 
   .modal__main {
@@ -1213,6 +1227,7 @@
   .modal__main-img img {
     width: 100%;
     height: 100%;
+    margin-top: 4px;
   }
 
   .modal__main-info {
